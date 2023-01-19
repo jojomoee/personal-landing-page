@@ -21,6 +21,9 @@ body {
   align-items: center;
   height: 33%;
 }
+#zs-c-ungesiegelt {
+}
+
 .zs {
   margin: 8px;
   height: 80%;
@@ -29,7 +32,7 @@ body {
   background-color: constants.$white;
 }
 
-#zs-gesiegelt {
+#zs-ungesiegelt {
 }
 
 #zeitregister-container {
@@ -61,6 +64,7 @@ body {
     margin: 8px;
   }
 }
+
 #project-container {
   #seal-chooser {
     height: 176px;
@@ -68,6 +72,8 @@ body {
     border-radius: 10px;
     margin: 8px;
     background-color: constants.$white;
+  }
+  #total-time-button {
   }
 }
 
@@ -92,4 +98,33 @@ body {
   height: 80px;
   margin: 8px;
   border: none;
+}
+
+#zs-c-gesiegelt {
+}
+
+#zs-gesiegelt {
+}
+
+#siegler {
+  position: absolute;
+  left: 20%;
+  border-radius: 20px;
+  height: 26.5%;
+  width: 25%;
+  background: linear-gradient(
+    270.06deg,
+    #1c1b1b -15.96%,
+    rgba(102, 101, 101, 0.609375) 45.56%,
+    rgba(217, 217, 217, 0) 105.82%
+  );
+  z-index: 1;
+}
+#qr-coder {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  top: 80%;
+  left: 35%;
+  background-color: constants.$black;
 }
