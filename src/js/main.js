@@ -1,20 +1,24 @@
+//SELECTOR
 function fromID(elementId) {
   return document.getElementById(elementId);
 }
 
+//date for date button
+let dateButton = fromID('date-button');
+function dateForDateButton() {
+  let date = new Date();
+  let y = date.getFullYear();
+  let m = date.getMonth();
+  let d = date.getDate();
+  let datestring =
+    '-' + ('0' + m + 1).slice(-2) + '-' + ('0' + d).slice(-2) + '-' + y + '-';
+  dateButton.innerHTML = datestring;
+}
+setInterval(dateForDateButton, 1000);
+
+//timer for time button
 let timeButton = fromID('time-button');
-let timeButtonStyle = timeButton.style.color;
-
-timeButton.addEventListener('click', () => {
-  if ((timeButton.style.color = 'green')) {
-    timeButton.style.color = '#d60000';
-  } else if ((timeButton.style.color = '#d60000')) {
-    timeButton.style.color = 'green';
-  }
-	console.log('hello')
-});
-
-function timer() {
+function timeForTimeButton() {
   let date = new Date();
   let h = date.getHours();
   let m = date.getMinutes();
@@ -30,10 +34,10 @@ function timer() {
     ('00' + ms).slice(-3);
   timeButton.innerHTML = timestring;
 }
-setInterval(timer, 1);
+setInterval(timeForTimeButton, 1);
 
 function usedTime() {
   let usedTime = fromID('used-time-button');
-  usedTime.innerHTML = '0000std00min';
+  usedTime.innerHTML = '00d00:00:00';
 }
 setInterval(usedTime, 1);
