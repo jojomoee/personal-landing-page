@@ -4,157 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ZEITREGISTRATUR</title>
-    <style>
-      :root {
-        --black: #1d1f21;
-        --white: #d9d9d9;
-        --red: #d60000;
-      }
-      body {
-        height: 100vh;
-        width: 100vw;
-        font-family: 'IBM Plex Mono', monospace;
-        background-color: var(--black);
-        align-items: center;
-        justify-content: center;
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-
-      .zs-c {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 33%;
-      }
-
-      .zs {
-        margin: 8px;
-        height: 80%;
-        width: 60%;
-        border-radius: 20px;
-        background-color: var(--white);
-      }
-
-      #zr-c {
-        height: 33%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-
-      #sgl-c {
-        display: flex;
-        justify-content: center;
-        flex-flow: column;
-        align-items: center;
-      }
-
-      #sgl-p {
-        height: 80px;
-        width: 80px;
-        border-radius: 20px;
-        background-color: var(--white);
-        margin: 8px;
-      }
-
-      #o-c {
-        height: 176px;
-        margin: 8px;
-      }
-
-      #sgl-a {
-        height: 176px;
-        width: 160px;
-        border-radius: 10px;
-        margin: 8px;
-        background-color: var(--white);
-      }
-      #on-off {
-        height: 100px;
-        width: 80px;
-        background-color: var(--white);
-      }
-      #z-a-c {
-        display: flex;
-        flex-flow: column;
-      }
-
-      #z-a {
-        color: var(--red);
-      }
-      .za {
-        background-color: constants.$white;
-        font-family: 'IBM Plex Mono', monospace;
-        font-weight: 400;
-        font-size: 40px;
-        color: constants.$black;
-        text-shadow: 0px 3px 5px rgba(57, 57, 57, 0.3);
-        border-radius: 20px;
-        width: 320px;
-        height: 80px;
-        margin: 8px;
-        border: none;
-      }
-
-      #sgl-s-c {
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        align-items: end;
-        flex-flow: column;
-        left: 20%;
-        border-radius: 20px;
-        height: 26.5%;
-        width: 25%;
-        background: linear-gradient(
-          270.06deg,
-          #1c1b1b -15.96%,
-          rgba(102, 101, 101, 0.609375) 45.56%,
-          rgba(217, 217, 217, 0) 105.82%
-        );
-        z-index: 1;
-      }
-      #qr {
-        height: 100px;
-        width: 100px;
-        background-color: var(--black);
-      }
-
-      .sgl-i {
-        margin-right: 50px;
-      }
-      #unterschrift {
-        margin-bottom: 20px;
-      }
-
-      #on-off {
-        left: 48%;
-        top: 40%;
-        position: absolute;
-        display: flex;
-        flex-flow: column;
-        align-items: center;
-        background-color: var(--black);
-      }
-      .switch {
-        font-family: 'IBM Plex Mono', monospace;
-        height: 200px;
-        width: 100px;
-        background-color: var(--white);
-        border: 5px solid var(--black);
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
     <!-- BESCHREIBUNG/DESCRIPTION
 		  z = zeit
-		  zs = zschein  	| c = container
+		  zs = zschein  	| c = container | o = oben | u = unten
 		  zr = zregistratur |
 		  sgl = siegel		|
 		  					| p = preview | a = auswahl | i = item
@@ -164,7 +20,22 @@
 		  d = datum
 	  -->
     <div class="zs-c">
-      <div class="zs"></div>
+      <div class="zs" id="zs-o">
+        <div id="input-fields-zs-o">
+          <div id="ls-zs-o">
+            <label class="l-zs-o" for="project-id">ProjectID:</label>
+            <label class="l-zs-o" for="title">Title:</label>
+            <label class="l-zs-o" for="client">Client:</label>
+            <label class="l-zs-o" for="description">Description:</label>
+          </div>
+          <div id="i-fs-zs-o">
+            <input class="i-f-zs-o" type="text" id="title" required />
+            <input class="i-f-zs-o" type="text" id="project-id" required />
+            <input class="i-f-zs-o" type="text" id="client" required />
+            <input class="i-f-zs-o" type="text" id="description" required />
+          </div>
+        </div>
+      </div>
     </div>
     <div id="zr-c">
       <div id="sgl-c">
@@ -346,55 +217,6 @@
       <button class="switch" id="on">ON</button>
       <button class="switch" id="off">OFF</button>
     </div>
-    <script>
-      function fromID(elementId) {
-        return document.getElementById(elementId);
-      }
-      let dateButton = fromID('d-a');
-      let timeButton = fromID('z-a');
-
-      //date for date button
-      function dateForDateButton() {
-        let date = new Date();
-        let y = date.getFullYear();
-        let m = date.getMonth();
-        let d = date.getDate();
-        let datestring =
-          '-' +
-          ('0' + m + 1).slice(-2) +
-          '-' +
-          ('0' + d).slice(-2) +
-          '-' +
-          y +
-          '-';
-        dateButton.innerHTML = datestring;
-      }
-      setInterval(dateForDateButton, 100);
-
-      //timer for time button TODO
-      function timeForTimeButton() {
-        let date = new Date();
-        let h = date.getHours();
-        let m = date.getMinutes();
-        let s = date.getSeconds();
-        let ms = date.getMilliseconds();
-        let timestring =
-          ('0' + h).slice(-2) +
-          ':' +
-          ('0' + m).slice(-2) +
-          ':' +
-          ('0' + s).slice(-2) +
-          '.' +
-          ('00' + ms).slice(-3);
-        timeButton.innerHTML = timestring;
-      }
-      setInterval(timeForTimeButton, 1);
-
-      function usedTime() {
-        let usedTime = fromID('z-n');
-        usedTime.innerHTML = '00d00:00:00';
-      }
-      setInterval(usedTime, 1);
-    </script>
+    <script src="script.js" type="module"></script>
   </body>
 </html>
