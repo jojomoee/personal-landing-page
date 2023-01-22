@@ -41,10 +41,21 @@ body {
 }
 .l-zs-o {
   display: flex;
+  margin: 8px;
 }
 .i-f-zs-o {
+  font-family: 'IBM Plex Mono', monospace;
+  background-color: var(--white);
+  border: 1px solid black;
+  border-radius: 5px;
+  border-left: none;
+  border-right: none;
+  margin: 8px;
   display: flex;
-  right: 0;
+  width: 380px;
+}
+#description {
+  height: 120px;
 }
 
 #zr-c {
