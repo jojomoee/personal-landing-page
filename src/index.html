@@ -18,25 +18,27 @@
 							| s = stempel
 							| 			  | c = container
 		  d = datum
+		  l = label
 	  -->
     <div class="zs-c">
       <div class="zs" id="zs-o">
         <div id="input-fields-zs-o">
           <div id="ls-zs-o">
-            <label class="l-zs-o" for="project-id">ProjectID:</label>
-            <label class="l-zs-o" for="title">Title:</label>
-            <label class="l-zs-o" for="client">Client:</label>
-            <label class="l-zs-o" for="description">Description:</label>
+            <label class="l-zs" for="project-id">ProjectID:</label>
+            <label class="l-zs" for="title">Title:</label>
+            <label class="l-zs" for="client">Client:</label>
+            <label class="l-zs" for="description">Description:</label>
           </div>
           <div id="i-fs-zs-o">
-            <input class="i-f-zs-o" type="text" id="title" required />
-            <input class="i-f-zs-o" type="text" id="project-id" required />
-            <input class="i-f-zs-o" type="text" id="client" required />
-            <textarea class="i-f-zs-o" type="text" id="description"> </textarea>
+            <input class="f-zs o" type="text" id="title" required />
+            <input class="f-zs o" type="text" id="project-id" required />
+            <input class="f-zs o" type="text" id="client" required />
+            <textarea class="f-zs o" type="text" id="description"> </textarea>
           </div>
         </div>
       </div>
     </div>
+
     <div id="zr-c">
       <div id="sgl-c">
         <div id="sgl-p"></div>
@@ -151,7 +153,22 @@
     </div>
 
     <div class="zs-c">
-      <div class="zs" id="zs-gesiegelt"></div>
+      <div class="zs" id="zs-u">
+        <div id="output-fields-zs-u">
+          <div id="ls-zs-u">
+            <label class="l-zs" for="project-id">ProjectID:</label>
+            <label class="l-zs" for="title">Title:</label>
+            <label class="l-zs" for="client">Client:</label>
+            <label class="l-zs" for="description">Description:</label>
+          </div>
+          <div id="o-fs-zs-u">
+            <p class="f-zs u"></p>
+            <p class="f-zs u"></p>
+            <p class="f-zs u"></p>
+            <p class="f-zs u"></p>
+          </div>
+        </div>
+      </div>
 
       <div id="sgl-s-c">
         <div class="sgl-i" id="unterschrift">

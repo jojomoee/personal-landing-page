@@ -35,21 +35,32 @@ body {
   justify-content: end;
 }
 
+#zs-u {
+  display: flex;
+  justify-content: end;
+}
+
 #input-fields-zs-o {
   display: flex;
   flex-flow: row;
 }
-.l-zs-o {
+.l-zs {
   display: flex;
   margin: 8px;
 }
-.i-f-zs-o {
-  font-family: 'IBM Plex Mono', monospace;
-  background-color: var(--white);
+.o {
   border: 1px solid black;
   border-radius: 5px;
   border-left: none;
   border-right: none;
+}
+.u {
+  border: none;
+}
+
+.f-zs {
+  font-family: 'IBM Plex Mono', monospace;
+  background-color: var(--white);
   margin: 8px;
   display: flex;
   width: 380px;

@@ -1,6 +1,7 @@
 function fromID(elementId) {
   return document.getElementById(elementId);
 }
+
 let dateButton = fromID('d-a');
 let timeButton = fromID('z-a');
 
