@@ -40,10 +40,17 @@ body {
   justify-content: end;
 }
 
+
 #input-fields-zs-o {
   display: flex;
   flex-flow: row;
 }
+
+#output-fields-zs-u {
+  display: flex;
+  flex-flow: row;
+}
+
 .l-zs {
   display: flex;
   margin: 8px;
@@ -156,6 +163,12 @@ body {
   width: 100px;
   background-color: var(--black);
 }
+#qr-txt {
+	position: absolute;
+	margin-right: 80px;
+	margin-top: 90px;
+
+}
 
 .sgl-i {
   margin-right: 50px;
@@ -163,7 +176,10 @@ body {
 #unterschrift {
   margin-bottom: 20px;
 }
-
+#seal-border{
+	position: absolute;
+	margin-right: 180px;
+}
 #on-off {
   left: 48%;
   top: 40%;
