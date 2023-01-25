@@ -1,0 +1,21 @@
+// nicht linear
+
+/* oben und unten */
+.f-zs {
+  font-family: 'IBM Plex Mono', monospace;
+  background-color: var(--white);
+  margin: 8px;
+  display: flex;
+  width: 380px;
+}
+
+.o {
+  border: 1px solid black;
+  border-radius: 5px;
+  border-left: none;
+  border-right: none;
+}
+
+.u {
+  border: none;
+}

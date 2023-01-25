@@ -1,0 +1,40 @@
+//absolute-positioned items
+
+#sgl-s-c {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  flex-flow: column;
+  left: 20%;
+  border-radius: 20px;
+  height: 26.5%;
+  width: 25%;
+  background: linear-gradient(
+    270.06deg,
+    #1c1b1b -15.96%,
+    rgba(102, 101, 101, 0.609375) 45.56%,
+    rgba(217, 217, 217, 0) 105.82%
+  );
+  z-index: 1;
+}
+
+#qr-txt {
+  position: absolute;
+  margin-right: 80px;
+  margin-top: 90px;
+}
+
+#seal-border {
+  position: absolute;
+  margin-right: 180px;
+}
+#on-off {
+  left: 48%;
+  top: 40%;
+  position: absolute;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  background-color: var(--black);
+}
