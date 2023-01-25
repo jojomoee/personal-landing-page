@@ -40,13 +40,7 @@ body {
   justify-content: end;
 }
 
-
-#input-fields-zs-o {
-  display: flex;
-  flex-flow: row;
-}
-
-#output-fields-zs-u {
+#i-f-zs-o-c {
   display: flex;
   flex-flow: row;
 }
@@ -55,16 +49,8 @@ body {
   display: flex;
   margin: 8px;
 }
-.o {
-  border: 1px solid black;
-  border-radius: 5px;
-  border-left: none;
-  border-right: none;
-}
-.u {
-  border: none;
-}
 
+/* oben und unten */
 .f-zs {
   font-family: 'IBM Plex Mono', monospace;
   background-color: var(--white);
@@ -72,6 +58,23 @@ body {
   display: flex;
   width: 380px;
 }
+
+.o {
+  border: 1px solid black;
+  border-radius: 5px;
+  border-left: none;
+  border-right: none;
+}
+
+.u {
+  border: none;
+}
+
+#o-f-zs-u {
+  display: flex;
+  flex-flow: row;
+}
+
 #description {
   height: 120px;
 }
@@ -164,10 +167,9 @@ body {
   background-color: var(--black);
 }
 #qr-txt {
-	position: absolute;
-	margin-right: 80px;
-	margin-top: 90px;
-
+  position: absolute;
+  margin-right: 80px;
+  margin-top: 90px;
 }
 
 .sgl-i {
@@ -176,9 +178,9 @@ body {
 #unterschrift {
   margin-bottom: 20px;
 }
-#seal-border{
-	position: absolute;
-	margin-right: 180px;
+#seal-border {
+  position: absolute;
+  margin-right: 180px;
 }
 #on-off {
   left: 48%;
