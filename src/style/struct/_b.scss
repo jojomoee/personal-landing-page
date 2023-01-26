@@ -38,3 +38,10 @@
   align-items: center;
   background-color: var(--black);
 }
+
+.switch {
+  border-radius: 10px;
+}
+#off {
+  background-color: var(--red);
+}

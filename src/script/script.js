@@ -35,9 +35,3 @@ function timeForTimeButton() {
   timeButton.innerHTML = timestring;
 }
 setInterval(timeForTimeButton, 1);
-
-function usedTime() {
-  let usedTime = fromID('z-n');
-  usedTime.innerHTML = '00d00:00:00';
-}
-setInterval(usedTime, 1);
