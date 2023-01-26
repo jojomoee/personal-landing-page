@@ -45,3 +45,19 @@
 #off {
   background-color: var(--red);
 }
+
+#header-left {
+  font-size: 50px;
+  color: var(--white);
+  position: absolute;
+  left: 10;
+  top: 0;
+}
+
+#header-right {
+  font-size: 50px;
+  color: var(--white);
+  position: absolute;
+  right: 0;
+  top: 0;
+}
