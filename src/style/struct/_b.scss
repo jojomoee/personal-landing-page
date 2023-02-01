@@ -47,17 +47,24 @@
 }
 
 #header-left {
-  font-size: 50px;
+  rotate: -90deg;
+  font-size: 160px;
   color: var(--white);
   position: absolute;
-  left: 10;
-  top: 0;
+  margin: 0;
+  padding: 0;
+  left: -50px;
+  top: 125px;
 }
 
 #header-right {
-  font-size: 50px;
+  rotate: 90deg;	
+  font-size: 160px;
   color: var(--white);
   position: absolute;
-  right: 0;
-  top: 0;
+  margin: 0;
+  padding: 0;
+  right: -240px;
+  top: 295px;
 }
+
