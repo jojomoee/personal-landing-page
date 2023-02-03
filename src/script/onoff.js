@@ -10,8 +10,10 @@ let usedTime = document.getElementById('z-n');
 let totalTime = document.getElementById('z-g');
 
 let pause = true;
-
 const timer = new Timer({});
+let savedTime = [];
+let savedTimeString;
+let saved = false;
 
 document.addEventListener('keydown', function (event) {
   if (event.keyCode == 38) {
@@ -23,6 +25,7 @@ document.addEventListener('keydown', function (event) {
     usedTime.style.background = red;
     timer.stop();
     console.log(timer.isStopped());
+    saved = true;
     usedTime.innerHTML = timer.format('%hh%mm%ss%msms');
   } else if (event.keyCode == 39 && pause) {
     usedTime.style.background = orange;
@@ -35,7 +38,10 @@ document.addEventListener('keydown', function (event) {
     timer.resume();
     usedTime.innerHTML = '';
   }
-  if (event.keyCode == 37) {
+  if (event.keyCode == 37 && saved) {
     totalTime.style.background = green;
+    savedTime.push(timer.time());
+    console.log(savedTime);
+    console.log(savedTimeString);
   }
 });
