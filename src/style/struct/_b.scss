@@ -29,22 +29,6 @@
   position: absolute;
   margin-right: 180px;
 }
-#on-off {
-  left: 48%;
-  top: 38%;
-  position: absolute;
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  background-color: var(--black);
-}
-
-.switch {
-  border-radius: 10px;
-}
-#off {
-  background-color: var(--red);
-}
 
 #header-left {
   rotate: -90deg;
@@ -58,7 +42,7 @@
 }
 
 #header-right {
-  rotate: 90deg;	
+  rotate: 90deg;
   font-size: 160px;
   color: var(--white);
   position: absolute;
@@ -67,4 +51,3 @@
   right: -240px;
   top: 295px;
 }
-
